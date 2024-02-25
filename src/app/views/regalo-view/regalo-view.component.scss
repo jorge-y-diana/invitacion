@@ -1,0 +1,25 @@
+@import "../../../styles";
+
+.main-panel {
+  height: 100%;
+  width: 100%;
+  background: $fondo_claro;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    text-align: center;
+
+    .description {
+      padding: 0 5%;
+    }
+    .cuenta {
+      background-color: $fondo_verde_70;
+      border: 1px solid;
+      border-radius: 19px;
+      text-align: center;
+      padding: 5px;
+    }
+  }
+}

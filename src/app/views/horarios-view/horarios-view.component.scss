@@ -1,0 +1,46 @@
+@import "../../../styles";
+
+.main-panel {
+  width: 100%;
+  background: $fondo_claro;
+  .container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+    .title {
+      margin: 0 10%;
+    }
+
+    .description {
+      padding: 0 5%;
+    }
+    .svg {
+      width: 100%;
+      overflow: visible;
+    }
+
+    .ball {
+      fill: black;
+      visibility: hidden;
+    }
+    .text {
+      fill: black;
+      font-size: 24px;
+      font-weight: bold;
+      visibility: hidden;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.9);
+
+    }
+    .subtext {
+      fill: black;
+      font-size: 20px;
+      font-weight: bold;
+      visibility: hidden;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.9);
+    }
+    .textDay {
+      font-size: 40px;
+      fill: $titulos;
+    }
+  }
+}

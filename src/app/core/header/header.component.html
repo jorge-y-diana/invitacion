@@ -1,0 +1,16 @@
+<div class="main" [style.backgroud]="color">
+  <mat-toolbar>
+    <span routerLink="/inicio" class="headerTitle">Jorge & Diana</span>
+    <span class="spacer"></span>
+    <button mat-icon-button style="align-self: end;" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" class="menuEmergente">
+      <button mat-menu-item routerLink="/inicio">Inicio</button>
+      <button mat-menu-item routerLink="/asistencia">Confirmación</button>
+      <button mat-menu-item routerLink="/horarios">Cuándo y dónde</button>
+      <button mat-menu-item routerLink="/nosotros">Nosotros</button>
+      <button mat-menu-item routerLink="/regalo">Regalo</button>
+   </mat-menu>
+  </mat-toolbar>
+</div>

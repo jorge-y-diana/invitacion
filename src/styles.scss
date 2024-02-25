@@ -1,0 +1,166 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+
+// Be sure that you only ever include 'mat-core' mixin once!
+// it should not be included for each theme.
+@include mat.core();
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+$jorge-y-diana-primary-custom: (
+  50 : #f1f3fd,
+  100 : #dde2fa,
+  200 : #c6cff7,
+  300 : #afbbf3,
+  400 : #9eadf1,
+  500 : #8d9eee,
+  600 : #8596ec,
+  700 : #7a8ce9,
+  800 : #7082e7,
+  900 : #5d70e2,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #e5e8ff,
+  A700 : #cbd2ff,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  )
+);
+$jorge-y-diana-accent-custom: (
+  50 : #f0fdf3,
+  100 : #daf9e2,
+  200 : #c2f6cf,
+  300 : #aaf2bb,
+  400 : #97efad,
+  500 : #85ec9e,
+  600 : #7dea96,
+  700 : #72e78c,
+  800 : #68e482,
+  900 : #55df70,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #daffe1,
+  A700 : #c1ffcd,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  )
+);
+$jorge-y-diana-warn-custom: (
+  50 : #e2e2e2,
+  100 : #b6b6b6,
+  200 : #868686,
+  300 : #565656,
+  400 : #313131,
+  500 : #0d0d0d,
+  600 : #0b0b0b,
+  700 : #090909,
+  800 : #070707,
+  900 : #030303,
+  A100 : #a6a6a6,
+  A200 : #8c8c8c,
+  A400 : #737373,
+  A700 : #666666,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  )
+);
+$fondo_claro : #f2f0f0;
+$jorge-y-diana-backgroud_2 : #aae8e4;
+$fondo_verde_70: #85ec9eb3;
+$fondo_verde: #85ec9e;
+$titulos: #c84040;
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+@include mat.core();
+
+$jorge-y-diana-primary: mat.define-palette($jorge-y-diana-primary-custom, 600);
+$jorge-y-diana-accent: mat.define-palette(mat.$light-green-palette);
+$jorge-y-diana-warn: mat.define-palette($jorge-y-diana-warn-custom);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$jorge-y-diana-theme: mat.define-light-theme((
+  color: (
+    primary: $jorge-y-diana-primary,
+    accent: $jorge-y-diana-accent,
+    warn: $jorge-y-diana-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($jorge-y-diana-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Diphylleia-Regular';
+  src: url('../src/assets/fonts/Diphylleia-Regular.ttf');
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Diphylleia-Regular';
+
+    .title {
+      margin: 3% 10%;
+      color: $titulos;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .description {
+      font-size: medium;
+    }
+}

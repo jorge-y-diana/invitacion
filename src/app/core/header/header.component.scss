@@ -1,0 +1,17 @@
+@import "../../../styles";
+.main {
+  .headerTitle {
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 10px;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar {
+    background: none;
+  }
+}
+::ng-deep .mat-mdc-menu-content {
+  background-color: $fondo_claro !important;
+}

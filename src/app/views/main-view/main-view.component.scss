@@ -1,0 +1,80 @@
+@import "../../../styles";
+
+.main-panel {
+  height: 100%;
+  width: 100%;
+  background: $fondo_claro;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    height: calc(100% - 56px);
+
+    .title {
+      margin: 0 10%;
+    }
+
+    .description {
+      padding: 0 5%;
+    }
+
+    .buttons {
+      width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 2%;
+
+      .button {
+        width: 46%;
+        margin: 1%;
+      }
+    }
+
+    .invitation-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      text-decoration: none;
+      color: #000000;
+      font-size: 18px;
+      border-radius: 0px;
+      width: 200px;
+      height: 40px;
+      position: relative;
+      transition: 0.3s;
+      background-color: $fondo_verde;
+    }
+
+    .invitation-button::before,
+    .invitation-button::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 1px solid #000000;
+      width: 100%;
+      height: 100%;
+      transition: .3s;
+    }
+
+    .invitation-button::before {
+      top: -2px;
+      left: -2px;
+    }
+
+    .invitation-button::after {
+      top: 2px;
+      left: 2px;
+    }
+
+    .invitation-button:hover::before,
+    .invitation-button:hover::after {
+      top: 0;
+      left: 0;
+    }
+  }
+}

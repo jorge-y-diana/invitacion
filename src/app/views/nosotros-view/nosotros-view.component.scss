@@ -1,0 +1,24 @@
+@import "../../../styles";
+
+.main-panel {
+  height: 100%;
+  width: 100%;
+  background: $fondo_claro;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+
+    .description {
+      padding: 0 5%;
+    }
+
+    .icon {
+      align-self: center;
+      color: $titulos;
+    }
+
+  }
+}
